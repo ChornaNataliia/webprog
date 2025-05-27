@@ -1,0 +1,143 @@
+/* ==== Базова (денна) тема ==== */
+body {
+  font-family: Arial, sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+  background: #e6f9f5; /* світло-зелений фон */
+  color: #004d66; /* темно-блакитний текст */
+  padding: 20px;
+  line-height: 1.6;
+}
+
+/* ==== Нічна тема ==== */
+body.night {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+body.night p {
+  background-color: #1e1e1e;
+  color: #b0bec5;
+}
+
+body.night h1,
+body.night h2 {
+  color: #80cbc4;
+}
+
+body.night .comment {
+  background-color: #1e1e1e;
+  color: #ccc;
+}
+
+body.night #browser-info {
+  background-color: #263238;
+  color: #e0e0e0;
+}
+
+/* Перемикач */
+.theme-toggle {
+  display: inline-block;
+  margin-bottom: 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.theme-toggle input {
+  margin-right: 8px;
+}
+
+h1 {
+  color: #008cba; /* блакитний */
+}
+
+h2 {
+  color: #006666;
+  border-bottom: 2px solid #b2dfdb;
+  padding-bottom: 5px;
+}
+
+p,
+li {
+  font-size: 16px;
+}
+
+ul {
+  list-style-type: circle;
+  margin-left: 20px;
+}
+
+b {
+  color: #00796b; /* зелено-блакитний */
+}
+
+p {
+  background-color: #d9f2ee;
+  padding: 10px;
+  border-radius: 10px;
+  width: fit-content;
+  box-shadow: 0 0 10px rgba(0, 128, 128, 0.1);
+}
+footer {
+  margin-top: 40px;
+  padding: 10px;
+  background-color: #b2dfdb;
+  border-radius: 8px;
+}
+#comments-section {
+  margin-top: 40px;
+}
+
+.comment {
+  background-color: #f0f8ff;
+  border: 1px solid #b2ebf2;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+}
+/* Modal styles */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #ffffff;
+  max-width: 400px;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #666;
+  position: relative;
+}
+
+.modal-content input,
+.modal-content textarea {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+.modal-content button[type="submit"] {
+  background: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #ccc;
+  border: none;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}

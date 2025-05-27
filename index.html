@@ -3,8 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <title>Nataliia Chorna</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="browser-data.js" defer></script>
+    <script src="fetch-comments.js" defer></script>
+    <script src="modal.js" defer></script>
+    <script src="theme.js" defer></script>
   </head>
   <body>
+    <label class="theme-toggle">
+      <input type="checkbox" id="themeSwitch" />
+      🌙 Перемкнути нічний режим
+    </label>
+
     <h1>Nataliia Chorna</h1>
     <p>
       123 Main Street
@@ -51,5 +61,45 @@
       <li>Ukrainian (Native)</li>
       <li>English (B2)</li>
     </ul>
+    <section id="comments-section">
+      <h2>Employer Comments</h2>
+      <div id="comments"></div>
+    </section>
+
+    <footer id="browser-info"></footer>
+    <!-- Модальне вікно -->
+    <div id="feedbackModal" class="modal">
+      <div class="modal-content">
+        <h2>Зворотній зв'язок</h2>
+        <form action="https://formspree.io/f/xanoredo" method="POST">
+          <label>
+            Ім’я:
+            <br />
+            <input type="text" name="name" required />
+          </label>
+          <br />
+          <label>
+            Email:
+            <br />
+            <input type="email" name="email" required />
+          </label>
+          <br />
+          <label>
+            Номер телефону:
+            <br />
+            <input type="tel" name="phone" required />
+          </label>
+          <br />
+          <label>
+            Повідомлення:
+            <br />
+            <textarea name="message" required></textarea>
+          </label>
+          <br />
+          <button type="submit">Відправити</button>
+        </form>
+        <button onclick="closeModal()" class="close-button">×</button>
+      </div>
+    </div>
   </body>
 </html>
